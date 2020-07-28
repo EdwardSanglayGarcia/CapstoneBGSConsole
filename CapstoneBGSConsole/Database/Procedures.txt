@@ -1,3 +1,5 @@
 ﻿This should include all the procedures declared within the database of the system
 
 USE CapstoneDemo;
+
+ Console.WriteLine("Group BGS Capstone II Gumagana ba?");
