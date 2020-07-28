@@ -22,7 +22,9 @@ namespace CapstoneBGSConsole
             DefaultData CallHelper = new DefaultData();
 
             Console.WriteLine("Group BGS Capstone II Gumagana ba?");
-
+            Console.WriteLine("Group BGS Capstone II Gumagana ba?");
+            Console.WriteLine("Group BGS Capstone II Gumagana ba?");
+            Console.WriteLine("Group BGS Capstone II Gumagana ba?");
 
             DataProvider cmd = new DataProvider();
 

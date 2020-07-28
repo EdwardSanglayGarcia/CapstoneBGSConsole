@@ -3,3 +3,4 @@
 USE CapstoneDemo;
 
  Console.WriteLine("Group BGS Capstone II Gumagana ba?");
+ ABCDEF
