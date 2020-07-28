@@ -6,6 +6,7 @@
 <p>In Partial Fulfillment of the Requirements for the Degree</p>
 <p>Bachelor of Science in Information Technology and Bachelor of Science in Information System</p>
 
+<img src="https://www.w3schools.com/images/lamp.jpg" alt="Lamp" width="32" height="32">
 
 Researchers<br />
 John Benjet M. Bendita<br />
