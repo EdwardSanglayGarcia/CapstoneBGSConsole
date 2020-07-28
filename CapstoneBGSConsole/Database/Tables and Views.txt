@@ -1,0 +1,171 @@
+﻿USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[CaseReport]    Script Date: 29/07/2020 4:20:18 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CaseReport](
+	[CaseReportID] [int] IDENTITY(1,1) NOT NULL,
+	[UserInformationID] [int] NOT NULL,
+	[DateReported] [datetime] NOT NULL,
+	[CaseReportPhoto] [varchar](2048) NULL,
+	[CaseLocation] [varchar](250) NOT NULL,
+	[EnvironmentalConcernID] [int] NOT NULL,
+	[XCoordinates] [int] NOT NULL,
+	[YCoordinates] [int] NOT NULL,
+	[UpdatedStatusID] [int] NOT NULL,
+	[UpdatedStatusDate] [datetime] NOT NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CaseReportID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[CaseReport]  WITH CHECK ADD FOREIGN KEY([EnvironmentalConcernID])
+REFERENCES [dbo].[EnvironmentalConcern] ([EnvironmentalConcernID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[CaseReport]  WITH CHECK ADD FOREIGN KEY([UpdatedStatusID])
+REFERENCES [dbo].[UpdatedStatus] ([UpdatedStatusID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[CaseReport]  WITH CHECK ADD FOREIGN KEY([UserInformationID])
+REFERENCES [dbo].[UserInformation] ([UserInformationID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[CityMedia]    Script Date: 29/07/2020 4:20:34 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CityMedia](
+	[CityMediaID] [int] NOT NULL,
+	[Description] [varchar](50) NOT NULL,
+	[TwitterAccount] [varchar](250) NULL,
+	[TwitterHash] [varchar](250) NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CityMediaID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[EnvironmentalConcern]    Script Date: 29/07/2020 4:20:41 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[EnvironmentalConcern](
+	[EnvironmentalConcernID] [int] NOT NULL,
+	[Description] [varchar](50) NOT NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[EnvironmentalConcernID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[UpdatedStatus]    Script Date: 29/07/2020 4:20:46 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UpdatedStatus](
+	[UpdatedStatusID] [int] NOT NULL,
+	[Description] [varchar](50) NOT NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UpdatedStatusID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[UserInformation]    Script Date: 29/07/2020 4:20:51 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UserInformation](
+	[UserInformationID] [int] IDENTITY(1,1) NOT NULL,
+	[UserTypeID] [int] NOT NULL,
+	[Username] [varchar](50) NOT NULL,
+	[Password] [varchar](1024) NOT NULL,
+	[GivenName] [varchar](50) NULL,
+	[MaidenName] [varchar](50) NULL,
+	[FamilyName] [varchar](50) NULL,
+	[Email] [varchar](100) NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserInformationID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Username] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[UserInformation]  WITH CHECK ADD FOREIGN KEY([UserTypeID])
+REFERENCES [dbo].[UserType] ([UserTypeID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  Table [dbo].[UserType]    Script Date: 29/07/2020 4:20:55 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UserType](
+	[UserTypeID] [int] NOT NULL,
+	[Description] [varchar](50) NULL,
+	[Notes] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserTypeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
