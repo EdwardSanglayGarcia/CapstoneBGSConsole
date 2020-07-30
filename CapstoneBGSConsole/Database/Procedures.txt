@@ -1,4 +1,5 @@
-﻿This should include all the procedures declared within the database of the system
+﻿This should include all the procedures declared within the database of the system.
+ACDEF
 
 USE [CapstoneDemo]
 GO
