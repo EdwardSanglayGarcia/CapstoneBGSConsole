@@ -3,6 +3,63 @@ GO
 
 DECLARE @RC int
 DECLARE @UserTypeID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserType] 
+   @UserTypeID = 1
+  ,@Description = 'Admin'
+GO
+
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserType] 
+   @UserTypeID = 2
+  ,@Description = 'User'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @EnvironmentalConcernID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_EnvironmentalConcern] 
+   @EnvironmentalConcernID = 1
+  ,@Description = 'Land Pollution'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @EnvironmentalConcernID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_EnvironmentalConcern] 
+   @EnvironmentalConcernID = 2
+  ,@Description = 'Water Pollution'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
 DECLARE @Username varchar(50)
 DECLARE @Password varchar(1024)
 DECLARE @GivenName varchar(50)
