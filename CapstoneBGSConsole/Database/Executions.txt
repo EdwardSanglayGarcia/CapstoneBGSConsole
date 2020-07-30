@@ -131,6 +131,76 @@ USE [CapstoneDemo]
 GO
 
 DECLARE @RC int
+DECLARE @UpdatedStatusID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UpdatedStatus] 
+   @UpdatedStatusID = 1
+  ,@Description = 'Submitted'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UpdatedStatusID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UpdatedStatus] 
+   @UpdatedStatusID = 2
+  ,@Description = 'Rejected'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UpdatedStatusID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UpdatedStatus] 
+   @UpdatedStatusID = 3
+  ,@Description = 'Accepted'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UpdatedStatusID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UpdatedStatus] 
+   @UpdatedStatusID = 4
+  ,@Description = 'In Progress'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UpdatedStatusID int
+DECLARE @Description varchar(50)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UpdatedStatus] 
+   @UpdatedStatusID = 5
+  ,@Description = 'Completed'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
 DECLARE @UserTypeID int
 DECLARE @Username varchar(50)
 DECLARE @Password varchar(1024)
@@ -245,4 +315,70 @@ EXECUTE @RC = [dbo].[I_UserInformation]
   ,@MaidenName = 'Kythera'
   ,@FamilyName ='Zaavan'
   ,@Email ='HouseOfKythera@LeagueOfLegends.edu.ph'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserInformationID int
+DECLARE @EnvironmentalConcernID int
+DECLARE @XCoordinates int
+DECLARE @YCoordinates int
+DECLARE @CaseReportPhoto varchar(2048)
+DECLARE @CaseLocation varchar(250)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_CaseReport] 
+   @UserInformationID =23 //CHANGE
+  ,@EnvironmentalConcernID = 2
+  ,@XCoordinates = 192
+  ,@YCoordinates = 168
+  ,@CaseReportPhoto ='PhotoOP'
+  ,@CaseLocation = 'Manila'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserInformationID int
+DECLARE @EnvironmentalConcernID int
+DECLARE @XCoordinates int
+DECLARE @YCoordinates int
+DECLARE @CaseReportPhoto varchar(2048)
+DECLARE @CaseLocation varchar(250)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_CaseReport] 
+   @UserInformationID =23 //CHANGE
+  ,@EnvironmentalConcernID = 2
+  ,@XCoordinates = 300
+  ,@YCoordinates = 450
+  ,@CaseReportPhoto ='PhotoOP'
+  ,@CaseLocation = 'Makati'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserInformationID int
+DECLARE @EnvironmentalConcernID int
+DECLARE @XCoordinates int
+DECLARE @YCoordinates int
+DECLARE @CaseReportPhoto varchar(2048)
+DECLARE @CaseLocation varchar(250)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_CaseReport] 
+   @UserInformationID =23 //CHANGE
+  ,@EnvironmentalConcernID = 1
+  ,@XCoordinates = 800
+  ,@YCoordinates = 950
+  ,@CaseReportPhoto ='PhotoOP'
+  ,@CaseLocation = 'Quezon'
 GO
