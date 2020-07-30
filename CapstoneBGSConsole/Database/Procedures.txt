@@ -2,6 +2,7 @@
 ACDEF
 ddddd
 gumagana ba?
+oo gumagana
 
 USE [CapstoneDemo]
 GO
