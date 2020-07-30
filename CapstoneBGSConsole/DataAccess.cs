@@ -14,7 +14,7 @@ namespace CapstoneBGSConsole
 
         protected static string constring = ConfigurationManager.ConnectionStrings["CapstoneDemo"].ConnectionString;
         //ABCDEFG HGIJIJIJ
-
+        int TRY;
         /*
          * ABAAA
          */
