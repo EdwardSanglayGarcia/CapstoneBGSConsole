@@ -3,6 +3,7 @@ ACDEF
 ddddd
 gumagana ba?
 oo gumagana
+nc one boss
 
 USE [CapstoneDemo]
 GO
