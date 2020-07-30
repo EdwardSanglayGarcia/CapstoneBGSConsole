@@ -21,6 +21,8 @@ namespace CapstoneBGSConsole
         int gdsddsdsd;//llllll2
         /*
          * aasasastrttrtrt85858533333333
+         * 
+         * SASSAS
          */
         int Y;
         protected static SqlConnection con;
