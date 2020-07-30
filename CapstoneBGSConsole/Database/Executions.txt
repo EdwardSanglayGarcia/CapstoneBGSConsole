@@ -1,1 +1,191 @@
-﻿
+﻿USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 1
+  ,@Username = 'Edward Garcia'
+  ,@Password = 'admin'
+  ,@GivenName = 'Andres'
+  ,@MaidenName = 'Aguinaldo'
+  ,@FamilyName ='Apolinario'
+  ,@Email ='Mabini@yahoo.com'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 1
+  ,@Username = 'NarutoUzumaki9Tails'
+  ,@Password = 'admin'
+  ,@GivenName = 'Naruto'
+  ,@MaidenName = 'Uzumaki'
+  ,@FamilyName ='Namikaze'
+  ,@Email ='9tails@yahoo.com'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'LogHorizon'
+  ,@Password = 'user'
+  ,@GivenName = 'Kei'
+  ,@MaidenName = 'ABC'
+  ,@FamilyName ='Shirogane'
+  ,@Email ='KShiroganeLeader@loghorizon.com'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'TheOneWhoMustNotBeNamed'
+  ,@Password = 'user'
+  ,@GivenName = 'Tom'
+  ,@MaidenName = 'Marvolo'
+  ,@FamilyName ='Riddle'
+  ,@Email ='TomRiddle@DarkEaters.com.ph'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'TheOneWhoMustNotBeNamed'
+  ,@Password = 'user'
+  ,@GivenName = 'Tom'
+  ,@MaidenName = 'Marvolo'
+  ,@FamilyName ='Riddle'
+  ,@Email ='TomRiddle@DarkEaters.com.ph'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'MCDonalds'
+  ,@Password = 'user'
+  ,@GivenName = 'M'
+  ,@MaidenName = 'C'
+  ,@FamilyName ='DO'
+  ,@Email ='MCDO@McdonaldsGlobal.com'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'TheGrandDuelist'
+  ,@Password = 'user'
+  ,@GivenName = 'Fiora'
+  ,@MaidenName = 'LoL'
+  ,@FamilyName ='Laurent'
+  ,@Email ='HouseOfLaurent@LeagueOfLegends.com'
+GO
+
+USE [CapstoneDemo]
+GO
+
+DECLARE @RC int
+DECLARE @UserTypeID int
+DECLARE @Username varchar(50)
+DECLARE @Password varchar(1024)
+DECLARE @GivenName varchar(50)
+DECLARE @MaidenName varchar(50)
+DECLARE @FamilyName varchar(50)
+DECLARE @Email varchar(100)
+
+-- TODO: Set parameter values here.
+
+EXECUTE @RC = [dbo].[I_UserInformation] 
+   @UserTypeID = 2
+  ,@Username = 'SpiderWoman'
+  ,@Password = 'user'
+  ,@GivenName = 'Elise'
+  ,@MaidenName = 'Kythera'
+  ,@FamilyName ='Zaavan'
+  ,@Email ='HouseOfKythera@LeagueOfLegends.edu.ph'
+GO
