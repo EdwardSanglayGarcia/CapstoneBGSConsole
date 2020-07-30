@@ -38,9 +38,7 @@ namespace CapstoneBGSConsole
         List<EnvironmentalConcern> UpdateEnvironmentalConcern(int EnvironmentalConcernID, string Description);
         List<UpdatedStatus> UpdateUpdatedStatus(int UpdatedStatusID, string Description);
         List<CaseReport> UpdateCaseReport(int CaseReportID, int UpdatedStatusID);
+        List<UserInformation> UpdateUserInformation(int UserInformationID, string GivenName, string FamilyName, string MaidenName);
         #endregion
-
-
-
     }
 }

@@ -313,6 +313,24 @@ namespace CapstoneBGSConsole
             }
             return result;
         }
+
+        public List<UserInformation> UpdateUserInformation(int UserInformationID, string GivenName, string FamilyName, string MaidenName)
+        {
+            var result = new List<UserInformation>();
+            using (IDbConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                var param = new DynamicParameters();
+                param.Add("@UserInformationID", UserInformationID);
+                param.Add("@GivenName", GivenName); 
+                param.Add("@FamilyName", FamilyName);
+                param.Add("@MaidenName", MaidenName);
+
+                result = con.Query<UserInformation>(
+                    StoredProcedureEnum.U_CaseReport.ToString(), param, commandType: CommandType.StoredProcedure).ToList();
+            }
+            return result;
+        }
         #endregion
 
         #region Authentication
