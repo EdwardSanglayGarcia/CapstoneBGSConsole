@@ -1,6 +1,7 @@
 ﻿This should include all the procedures declared within the database of the system.
 ACDEF
 ddddd
+gumagana ba?
 
 USE [CapstoneDemo]
 GO
