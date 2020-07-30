@@ -13,7 +13,7 @@ namespace CapstoneBGSConsole
     {
 
         protected static string constring = ConfigurationManager.ConnectionStrings["CapstoneDemo"].ConnectionString;
-
+        //ABCDEFG
         protected static SqlConnection con;
         protected static SqlCommand cmd;
         protected static SqlDataAdapter da;
