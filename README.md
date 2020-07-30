@@ -1,4 +1,4 @@
-# <img src="https://www.w3schools.com/images/lamp.jpg" alt="Lamp" width="32" height="32"> CapstoneBGSConsole
+# <img src="https://en.wikipedia.org/wiki/Map%C3%BAa_University#/media/File:Map%C3%BAa_University_logo.png" alt="Lamp" width="32" height="32"> CapstoneBGSConsole
 <p>Final repository of Capstone Group BGS for Console Application Development</p>
 
 <b><p>TerraTech: A Crowdsourcing Web Application that Aids Environmental Needs and Concerns</p></b>
