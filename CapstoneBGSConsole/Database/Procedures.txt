@@ -1,8 +1,463 @@
 ﻿This should include all the procedures declared within the database of the system
 
-USE CapstoneDemo;
+USE [CapstoneDemo]
+GO
 
- Console.WriteLine("Group BGS Capstone II Gumagana ba?");
- ABCDEF
+/****** Object:  StoredProcedure [dbo].[D_CaseReport]    Script Date: 31/07/2020 5:07:11 AM ******/
+SET ANSI_NULLS ON
+GO
 
- sana ma pull
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[D_CaseReport] 
+@CaseReportID INT
+AS
+BEGIN
+DELETE FROM CaseReport WHERE CaseReportID = @CaseReportID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[D_EnvironmentalConcern]    Script Date: 31/07/2020 5:07:15 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[D_EnvironmentalConcern]
+@EnvironmentalConcernID INT
+AS
+BEGIN
+DELETE FROM EnvironmentalConcern WHERE EnvironmentalConcernID = @EnvironmentalConcernID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[D_UpdatedStatus]    Script Date: 31/07/2020 5:07:24 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[D_UpdatedStatus]
+@UpdatedStatusID INT
+AS
+BEGIN
+DELETE FROM UpdatedStatus WHERE UpdatedStatusID = @UpdatedStatusID
+END;
+GO
+
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[D_UserInformation]    Script Date: 31/07/2020 5:07:29 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[D_UserInformation]
+(
+@UserInformationID INT
+)
+AS
+BEGIN
+DELETE FROM UserInformation WHERE UserInformationID = @UserInformationID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[D_UserType]    Script Date: 31/07/2020 5:07:34 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[D_UserType]
+@UserTypeID INT
+AS
+BEGIN
+DELETE FROM UserType 
+WHERE UserTypeID = @UserTypeID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[I_CaseReport]    Script Date: 31/07/2020 5:07:38 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[I_CaseReport]
+(
+@UserInformationID INT,
+@EnvironmentalConcernID INT,
+@XCoordinates INT,
+@YCoordinates INT,
+@CaseReportPhoto VARCHAR(2048),
+@CaseLocation VARCHAR(250)
+)
+AS
+BEGIN
+INSERT INTO CaseReport VALUES (@UserInformationID, GETDATE(),@CaseReportPhoto, @CaseLocation ,@EnvironmentalConcernID, @XCoordinates, @YCoordinates, 1, GETDATE(),'Inserted: ' + CAST(GETDATE() AS NVARCHAR(MAX)) )
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[I_EnvironmentalConcern]    Script Date: 31/07/2020 5:07:42 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[I_EnvironmentalConcern]
+(
+@EnvironmentalConcernID INT,
+@Description VARCHAR(50)
+)
+AS
+BEGIN
+INSERT INTO EnvironmentalConcern VALUES (@EnvironmentalConcernID, @Description, 'Inserted: ' + CAST(GETDATE() AS NVARCHAR(MAX)))
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[I_UpdatedStatus]    Script Date: 31/07/2020 5:07:46 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[I_UpdatedStatus]
+(
+@UpdatedStatusID INT,
+@Description VARCHAR(50) 
+)
+AS
+BEGIN
+INSERT INTO UpdatedStatus VALUES (@UpdatedStatusID, @Description, 'Inserted: ' + CAST(GETDATE() AS NVARCHAR(MAX)) )
+END
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[I_UserInformation]    Script Date: 31/07/2020 5:07:49 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[I_UserInformation]
+(
+@UserTypeID INT,
+@Username VARCHAR(50),
+@Password VARCHAR(1024),
+@GivenName VARCHAR(50),
+@MaidenName VARCHAR(50),
+@FamilyName VARCHAR(50),
+@Email VARCHAR(100)
+)
+AS
+BEGIN
+INSERT INTO UserInformation VALUES (@UserTypeID, @Username, @Password, @GivenName, @MaidenName, @FamilyName, @Email, 'Inserted: ' + CAST(GETDATE() AS NVARCHAR(MAX)))
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[I_UserType]    Script Date: 31/07/2020 5:07:53 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[I_UserType]
+(
+@UserTypeID INT,
+@Description VARCHAR(50)
+)
+AS
+BEGIN
+INSERT INTO UserType VALUES (@UserTypeID, @Description,'Inserted: ' + CAST(GETDATE() AS NVARCHAR(MAX)));
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[L_UserInformation]    Script Date: 31/07/2020 5:07:57 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE PROCEDURE [dbo].[L_UserInformation]
+(
+@Username VARCHAR(50),
+@Password VARCHAR(1024)
+)
+AS
+BEGIN
+SELECT COUNT(*) FROM UserInformation 
+WHERE 
+Username = @Username AND
+Password = @Password
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[U_CaseReport]    Script Date: 31/07/2020 5:08:01 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[U_CaseReport]
+(
+@CaseReportID INT,
+@UpdatedStatusID INT
+)
+AS
+BEGIN
+UPDATE CaseReport
+SET 
+UpdatedStatusID = @UpdatedStatusID,
+UpdatedStatusDate = GETDATE(),
+Notes = 'Updated: ' + CAST(GETDATE() AS NVARCHAR(MAX))
+WHERE CaseReportID = @CaseReportID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[U_EnvironmentalConcern]    Script Date: 31/07/2020 5:08:05 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[U_EnvironmentalConcern]
+(
+@EnvironmentalConcernID INT,
+@Description VARCHAR(50)
+)
+AS
+BEGIN
+UPDATE EnvironmentalConcern
+SET 
+Description = @Description,
+Notes = 'Updated: ' + CAST(GETDATE() AS NVARCHAR(MAX))
+WHERE 
+EnvironmentalConcernID = @EnvironmentalConcernID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[U_UpdatedStatus]    Script Date: 31/07/2020 5:08:09 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[U_UpdatedStatus]
+(
+@UpdatedStatusID INT,
+@Description VARCHAR(50)
+)
+AS 
+BEGIN
+UPDATE UpdatedStatus
+SET Description = @Description
+WHERE UpdatedStatusID = @UpdatedStatusID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[U_UserInformation]    Script Date: 31/07/2020 5:08:13 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[U_UserInformation]
+(
+@UserInformationID INT,
+@GivenName VARCHAR(50),
+@MaidenName VARCHAR(50),
+@FamilyName VARCHAR(50)
+)
+AS
+BEGIN
+UPDATE UserInformation
+SET
+GivenName = @GivenName,
+MaidenName = @MaidenName,
+FamilyName = @FamilyName
+WHERE
+UserInformationID = @UserInformationID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[U_UserType]    Script Date: 31/07/2020 5:08:17 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[U_UserType]
+(
+@UserTypeID INT,
+@Description VARCHAR(50)
+)
+AS
+BEGIN
+UPDATE UserType
+SET Description = @Description
+WHERE UserTypeID = @UserTypeID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[V_CaseReport]    Script Date: 31/07/2020 5:08:22 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[V_CaseReport]
+AS
+BEGIN
+SELECT 
+CR.CaseReportID, UI.UserInformationID, UI.FamilyName, UI.GivenName, UI.MaidenName,
+CR.DateReported, CR.EnvironmentalConcernID, EC.Description AS Concern,
+CR.UpdatedStatusID, US.Description AS UpdatedStatus, CR.UpdatedStatusDate,
+CR.CaseLocation, CR.CaseReportPhoto, CR.XCoordinates, CR.YCoordinates, CR.Notes
+FROM CaseReport CR 
+INNER JOIN UserInformation UI ON UI.UserInformationID = CR.UserInformationID
+INNER JOIN EnvironmentalConcern EC ON EC.EnvironmentalConcernID = CR.EnvironmentalConcernID
+INNER JOIN UpdatedStatus US ON US.UpdatedStatusID = CR.UpdatedStatusID
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[V_EnvironmentalConcern]    Script Date: 31/07/2020 5:08:26 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[V_EnvironmentalConcern]
+AS
+BEGIN
+SELECT * FROM EnvironmentalConcern
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[V_UpdatedStatus]    Script Date: 31/07/2020 5:08:30 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[V_UpdatedStatus]
+AS
+BEGIN
+SELECT * FROM UpdatedStatus
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[V_UserInformation]    Script Date: 31/07/2020 5:08:35 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[V_UserInformation]
+AS
+BEGIN
+SELECT * FROM UserInformation
+END;
+GO
+
+USE [CapstoneDemo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[V_UserType]    Script Date: 31/07/2020 5:08:39 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[V_UserType]
+AS
+BEGIN
+SELECT UserTypeID, Description, Notes
+FROM UserType
+END;
+GO
+
