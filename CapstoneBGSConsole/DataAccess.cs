@@ -20,7 +20,7 @@ namespace CapstoneBGSConsole
           */
         int gdsddsdsd;//llllll2
         /*
-         * aasasastrttrtrt85858533333333
+         * aasasastrttrtrt858585333333333
          * 
          * SASSAS
          */

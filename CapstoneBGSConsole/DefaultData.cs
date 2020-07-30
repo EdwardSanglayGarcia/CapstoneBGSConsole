@@ -8,7 +8,7 @@ namespace CapstoneBGSConsole
 {
     public class DefaultData
     {
-        //Is This Working?
+        //Is This Working? oo
         public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Capstone Generated Document";
 
     }
