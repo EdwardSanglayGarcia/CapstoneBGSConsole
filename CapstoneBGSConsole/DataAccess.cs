@@ -18,7 +18,7 @@ namespace CapstoneBGSConsole
         /*
          * ABAAA
           */
-        int gdsddsdsd;
+        int gdsddsdsd;//llllll
         int Y;
         protected static SqlConnection con;
         protected static SqlCommand cmd;
