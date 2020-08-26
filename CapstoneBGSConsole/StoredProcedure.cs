@@ -32,5 +32,9 @@ namespace CapstoneBGSConsole
         D_CaseReport,
         U_CaseReport,
 
+
+        GENERATION_AreaPerMonthYear,
+        GENERATION_MonthlyTotals
+
     }
 }

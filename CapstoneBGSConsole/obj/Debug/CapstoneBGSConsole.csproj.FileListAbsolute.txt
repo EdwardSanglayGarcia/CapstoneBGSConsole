@@ -22,3 +22,15 @@ C:\Users\pc\source\repos\MyDummyConsole\CapstoneBGSConsole\CapstoneBGSConsole\ob
 C:\Users\pc\source\repos\MyDummyConsole\CapstoneBGSConsole\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.csproj.CopyComplete
 C:\Users\pc\source\repos\MyDummyConsole\CapstoneBGSConsole\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.exe
 C:\Users\pc\source\repos\MyDummyConsole\CapstoneBGSConsole\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.pdb
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.exe
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.pdb
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\CapstoneBGSConsole.exe.config
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\CapstoneBGSConsole.exe
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\CapstoneBGSConsole.pdb
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\Dapper.dll
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\EPPlus.dll
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\Dapper.xml
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\bin\Debug\EPPlus.xml
+C:\Users\pc\Desktop\Capstone Codes\Console\CapstoneBGSConsole\obj\Debug\CapstoneBGSConsole.csproj.CopyComplete

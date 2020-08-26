@@ -40,5 +40,10 @@ namespace CapstoneBGSConsole
         List<CaseReport> UpdateCaseReport(int CaseReportID, int UpdatedStatusID);
         List<UserInformation> UpdateUserInformation(int UserInformationID, string GivenName, string FamilyName, string MaidenName);
         #endregion
+
+
+        List<AreaDetails> GetAreaDetailsPerMonthYear(int month, int year);
+
+        List<AreaDetails> GetMonthlyTotals(int month, int year);
     }
 }

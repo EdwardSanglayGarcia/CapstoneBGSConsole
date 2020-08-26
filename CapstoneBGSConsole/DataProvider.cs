@@ -367,5 +367,40 @@ namespace CapstoneBGSConsole
         //}
         #endregion
 
+
+
+        public List<AreaDetails> GetAreaDetailsPerMonthYear(int month, int year)
+        {
+            var result = new List<AreaDetails>();
+            using (IDbConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                var param = new DynamicParameters();
+                param.Add("@month", month);
+                param.Add("@year", year);
+
+                result = con.Query<AreaDetails>(
+                    StoredProcedureEnum.GENERATION_AreaPerMonthYear.ToString(), param, commandType: CommandType.StoredProcedure).ToList();
+            }
+            return result;
+        }
+
+        public List<AreaDetails> GetMonthlyTotals(int month, int year)
+        {
+            var result = new List<AreaDetails>();
+            using (IDbConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                var param = new DynamicParameters();
+                param.Add("@month", month);
+                param.Add("@year", year);
+
+
+                result = con.Query<AreaDetails>(
+                    StoredProcedureEnum.GENERATION_MonthlyTotals.ToString(), param, commandType: CommandType.StoredProcedure).ToList();
+            }
+            return result;
+        }
+
     }
 }

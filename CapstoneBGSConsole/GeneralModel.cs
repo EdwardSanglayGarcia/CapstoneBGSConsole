@@ -60,4 +60,26 @@ namespace CapstoneBGSConsole
         public string Notes { get; set; }
     }
 
+
+    public class AreaDetails
+    {
+        public int Number { get; set; }
+        public string CaseLocation { get; set; }
+        public int L_Submitted { get; set; }
+        public int L_Rejected { get; set; }
+        public int L_Accepted { get; set; }
+        public int L_InProgress { get; set; }
+        public int L_Completed { get; set; }
+
+        public int W_Submitted { get; set; }
+        public int W_Rejected { get; set; }
+        public int W_Accepted { get; set; }
+        public int W_InProgress { get; set; }
+        public int W_Completed { get; set; }
+    }
+
+    public class MonthlyTotals
+    {
+        
+    }
 }
